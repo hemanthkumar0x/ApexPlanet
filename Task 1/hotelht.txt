@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Paradise • Luxury Global Stays</title>
+  <meta name="description" content="Hotel Paradise offers premium accommodations in Pune and Moscow. Book deluxe and standard rooms with ease.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Hotel Paradise",
+    "description": "Luxury stays in global locations with deluxe and standard rooms.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Paradise Lane",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "url": ".",
+    "image": [
+      "https://images.trvl-media.com/lodging/3000000/2240000/2235300/2235207/ed30f3d5.jpg?h=800&impolicy=fcrop&p=1&q=medium&w=1200",
+      "https://azimuthotels.com/resize/images/upload/Aerostar_rooms_4.jpg"
+    ],
+    "telephone": "+1-800-123-4567"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" aria-label="Main header">
+    <div class="container">
+      <a class="logo" href="#">Hotel Paradise</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn-primary small" href="#booking">Reserve</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Escape to Comfort & Elegance</h1>
+        <p>Experience world-class hospitality at Hotel Paradise. Select from our curated rooms in Pune and Moscow.</p>
+        <a href="#booking" class="btn-primary">Book Now</a>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="https://images.trvl-media.com/lodging/3000000/2240000/2235300/2235207/ed30f3d5.jpg?h=800&impolicy=fcrop&p=1&q=medium&w=1200" alt="Luxury deluxe room with city view">
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="rooms" class="section rooms">
+      <h2 class="section-title">Featured Rooms</h2>
+      <p class="section-subtitle">Handpicked accommodations for discerning travelers.</p>
+
+      <div class="room-grid">
+        <!-- Deluxe Pune -->
+        <article class="room-card" aria-label="Deluxe Room Pune">
+          <div class="room-image">
+            <img src="https://images.trvl-media.com/lodging/3000000/2240000/2235300/2235207/ed30f3d5.jpg?h=800&impolicy=fcrop&p=1&q=medium&w=1200" alt="Deluxe Room – Pune">
+          </div>
+          <div class="room-content">
+            <h3>Deluxe Room – Pune</h3>
+            <p>398 sq ft of elegance with city view, premium bedding, spa-style bathtub, and rainfall shower. King or twin configuration.</p>
+            <div class="room-meta">
+              <span class="price">₹8,500 / night</span>
+              <span class="badge">Best Seller</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Standard Moscow -->
+        <article class="room-card" aria-label="Standard Room Moscow">
+          <div class="room-image">
+            <img src="https://azimuthotels.com/resize/images/upload/Aerostar_rooms_4.jpg" alt="Standard Room – Moscow">
+          </div>
+          <div class="room-content">
+            <h3>Standard Room – Moscow</h3>
+            <p>21 m² smartly designed space with modern fittings, efficient layout, and comfortable amenities for business or leisure.</p>
+            <div class="room-meta">
+              <span class="price">$90 / night</span>
+              <span class="badge secondary">Cozy Choice</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking">
+      <h2 class="section-title">Reserve Your Stay</h2>
+      <p class="section-subtitle">Simple, fast and secure booking.</p>
+
+      <form id="bookingForm" class="booking-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full Name<span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required aria-required="true">
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email<span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true">
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field">
+            <label for="checkin">Check-in<span aria-hidden="true">*</span></label>
+            <input type="date" id="checkin" name="checkin" required aria-required="true">
+            <small class="error" data-for="checkin"></small>
+          </div>
+          <div class="field">
+            <label for="checkout">Check-out<span aria-hidden="true">*</span></label>
+            <input type="date" id="checkout" name="checkout" required aria-required="true">
+            <small class="error" data-for="checkout"></small>
+          </div>
+          <div class="field full-width">
+            <label for="room">Select Room<span aria-hidden="true">*</span></label>
+            <select id="room" name="room" required aria-required="true">
+              <option value="">Choose a room</option>
+              <option value="Deluxe Room – Pune">Deluxe Room – Pune</option>
+              <option value="Standard Room – Moscow">Standard Room – Moscow</option>
+            </select>
+            <small class="error" data-for="room"></small>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary large">Confirm Booking</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="about" class="section about">
+      <h2 class="section-title">About Hotel Paradise</h2>
+      <p>At Hotel Paradise, we blend localized charm with international standards. From Pune’s vibrant energy to Moscow’s refined elegance, our properties are curated for memorable stays.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Questions? Reach us at <a href="mailto:info@hotelparadise.com">info@hotelparadise.com</a> or call <a href="tel:+18001234567">+1-800-123-4567</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Hotel Paradise</h4>
+        <p>Providing luxury accommodation worldwide with impeccable service.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@hotelparadise.com">info@hotelparadise.com</a></p>
+        <p>Phone: <a href="tel:+18001234567">+1-800-123-4567</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>&copy; 2025 Hotel Paradise. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
